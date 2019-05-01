@@ -1,0 +1,21 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Report.Master.cs" Inherits="Project_1.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <link rel="stylesheet" href="StyleSheet1.css" type="text/css" />
+            <asp:Label ID="lblTitle" runat="server" Style="z-index: 1; left: 366px; top: 22px; position: absolute" ForeColor="White" Text="CCIS 2645 Introduction to ASP.Net" Font-Size="XX-Large"></asp:Label>
+            <asp:Label ID="lblDate" runat="server" OnDataBinding="Page_Load" Style="z-index: 1; left: 66px; top: 93px; position: absolute; width: 250px" Text= ForeColor="White" Font-Size="X-Large"><%= System.DateTime.Now.ToString() %></asp:Label>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+            <asp:Label ID="lblReport" runat="server" OnDataBinding="Page_Load" Style="z-index: 1; left: 475px; top: 146px; position: absolute; width: 450px; height: 55px;" Font-Size="XX-Large"></asp:Label>
+    </form>
+</body>
+</html>
